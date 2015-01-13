@@ -1,0 +1,46 @@
+
+.component-menubar {
+    position: fixed;
+    top: 40px;
+    left: 400px;
+    z-index: 100;
+    height: 100px;
+
+    .menu-groups {
+        float: left;
+    }
+    .menu-group {
+        height: 26px;
+        float: left;
+        list-style-type: none;
+        position:relative;
+    }
+
+    .btn {
+        border-color: #1c1f25;
+    }
+
+    .menu {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        background: @menu-background;
+        border: 1px solid @menu-border-color;
+        color: @menu-color;
+        cursor: default;
+        position: absolute;
+        top: 100%;
+        min-width: 200px;
+        display: none;
+
+    }
+
+    .open {
+
+        background: @menu-background;
+        color: @menu-color;
+
+
+    }   
+
+}
