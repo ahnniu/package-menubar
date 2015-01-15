@@ -6,6 +6,17 @@
     z-index: 100;
     height: 100px;
 
+    span {
+        display: block;
+    }
+    li:hover > span {
+        background-color: #aaa;
+        color: #fff;
+    }
+    span:active {
+        background-color: #aaa;
+        color: #fff;
+    }
     .menu-groups {
         float: left;
     }
@@ -16,12 +27,7 @@
         position:relative;
     }
 
-    .btn {
-        border-color: #1c1f25;
-    }
-
     .menu {
-        list-style: none;
         margin: 0px;
         padding: 0px;
         background: @menu-background;
@@ -32,7 +38,23 @@
         top: 100%;
         min-width: 200px;
         display: none;
+        list-style: none;
 
+    }
+
+    .menu.show {
+        display: block;
+    }
+
+
+    .type-menu {
+        position: relative;
+        &:hover > .menu {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 100%;
+        }
     }
 
     .open {
@@ -41,6 +63,7 @@
         color: @menu-color;
 
 
-    }   
+    }
+
 
 }

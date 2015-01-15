@@ -30,7 +30,15 @@ define([], function() {
             return this.ready();
         },
 
+        closeMenu: function() {
+            $(".menu.show").removeClass("show");
+            $(".btn.open").removeClass("open");
+
+        },
+
         renderGroup: function(group) {
+
+            var that = this;
             group = _.defaults(group, {
                 'label': "",
                 'items': [],
@@ -42,13 +50,19 @@ define([], function() {
             });
 
             var $button = $("<button>", {
-                'class': "btn dropdown-toggle",
+                'class': "btn",
                 'text': group.label,
                 'click': function() {
-                    $button.addClass("open");
-                    var $menu = $(".menu");
-                    $menu.show();
+                    var open = $button.hasClass("open");
 
+                    // close all menu
+                    that.closeMenu();
+
+                    if(!open) {
+                        $button.addClass("open");
+                        var $menu = $button.siblings();
+                        $menu.addClass('show');
+                    }
                 }
             });
 
@@ -89,6 +103,9 @@ define([], function() {
                 'class': 'item-label',
                 'text': item.label,
                 'click': function(e) {
+                    if(item.type != "menu") {
+                        that.closeMenu();
+                    }
                     e.preventDefault();
                     that.trigger("action");
                     item.click();

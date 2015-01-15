@@ -51,41 +51,13 @@ define([
                 label: "View",
                 items: [
                     {
-                        label: "Pannels",
+                        label: "Files",
                         click: function() {
                         }
                     },
                     {
-                        label: "New Folder",
+                        label: "Folder",
                         click: function() {
-                        }
-                    },
-                    {
-                        type: "divider"
-                    },
-                    {
-                        label: "Upload",
-                        type: "menu",
-                        items: [
-                            {
-                                label: "Files",
-                                click: function() {
-                                }
-                            },
-                            {
-                                label: "Folder",
-                                click: function() {
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        type: "divider"
-                    },
-                    {
-                        label: "Refresh Tree",
-                        click: function() {
-
                         }
                     }
                 ]
