@@ -4,43 +4,62 @@
     top: 40px;
     left: 400px;
     z-index: 100;
-    height: 100px;
 
-    span {
-        display: block;
-    }
-    li:hover > span {
-        background-color: #aaa;
-        color: #fff;
-    }
-    span:active {
-        background-color: #aaa;
-        color: #fff;
-    }
     .menu-groups {
         float: left;
+
+        margin: 0px;
+        padding: 0px;
+        border: 0;
     }
     .menu-group {
-        height: 26px;
         float: left;
         list-style-type: none;
         position:relative;
+        margin: 0px 4px;
+        .btn {
+            margin: 0;
+            padding: 3px 8px;
+            border: 0;
+            width: 100%;
+            cursor:default;
+        }
     }
 
     .menu {
         margin: 0px;
         padding: 0px;
-        background: @menu-background;
-        border: 1px solid @menu-border-color;
-        color: @menu-color;
-        cursor: default;
+        border: 0;
         position: absolute;
-        top: 100%;
-        min-width: 200px;
+        top: 99%;
         display: none;
         list-style: none;
+        color: @menu-color;
+        background: @menu-background;
+        cursor: default;
+        z-index: 101;
+
+        .menu-item {
+            min-width: 200px;
+
+            .item-label {
+                display: block;
+                padding: 3px 8px;
+                width: 100%;
+            }
+
+            &:hover > .item-label {
+                color: @menu-item-active-color;
+                background: @menu-item-active-background;
+            }
+        
+        }
+
+
 
     }
+
+
 
     .menu.show {
         display: block;
@@ -59,9 +78,8 @@
 
     .open {
 
-        background: @menu-background;
         color: @menu-color;
-
+        background: @menu-background;
 
     }
 
