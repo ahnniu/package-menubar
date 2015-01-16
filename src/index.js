@@ -9,6 +9,7 @@ define([
                 items: [
                     {
                         label: "New File",
+                        icon: "file-code-o",
                         click: function() {
                         }
                     },

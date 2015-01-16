@@ -92,6 +92,7 @@ define([], function() {
             item = _.defaults(item, {
                 'type': "normal",
                 'label': "",
+                'icon': "sign-blank",
                 'click': function() { }
             });
 
@@ -100,7 +101,7 @@ define([], function() {
                 'class': "menu-item type-"+item.type
             });
             var $label = $("<span>", {
-                'class': 'item-label',
+                'class': "item-label",
                 'text': item.label,
                 'click': function(e) {
                     if(item.type != "menu") {
@@ -111,6 +112,13 @@ define([], function() {
                     item.click();
                 }
             });
+
+            var $icon = $("<i>", {
+                'class': "menu-icon fa fa-" + item.icon
+            });
+
+            $icon.prependTo($label);
+
 
             // Add label
             if (item.type != "divider") $label.appendTo($item);

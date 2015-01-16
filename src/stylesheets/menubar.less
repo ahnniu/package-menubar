@@ -39,12 +39,16 @@
         cursor: default;
         z-index: 101;
 
+        &.show {
+            display: block;
+        }
+
         .menu-item {
             min-width: 200px;
 
             .item-label {
                 display: block;
-                padding: 3px 8px;
+                padding: 3px 80px 3px 0;
                 width: 100%;
             }
 
@@ -52,17 +56,24 @@
                 color: @menu-item-active-color;
                 background: @menu-item-active-background;
             }
+
+            &.type-divider {
+                height:1px;
+                margin:9px 0;
+                overflow:hidden;
+                background-color:#e5e5e5;
+            }
         
+        }
+
+        .menu-icon {
+            font-size:12px;
+            width:26px;
+            text-align:center;
         }
 
 
 
-    }
-
-
-
-    .menu.show {
-        display: block;
     }
 
 
