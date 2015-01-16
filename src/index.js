@@ -1,5 +1,5 @@
 define([
-    "src/menuview",
+    "src/menubar",
     "less!src/stylesheets/menubar.less"
     ], function(MenuBar) {
 
