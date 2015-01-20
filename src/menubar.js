@@ -3,6 +3,7 @@ define([], function() {
     var _ = codebox.require("hr/utils");
     var $ = codebox.require("hr/dom");
     var hr = codebox.require("hr/hr");
+    var commands = codebox.require("core/commands");
 
     var MenuBarView = hr.View.extend({
         className: "component-menubar",
@@ -93,7 +94,7 @@ define([], function() {
                 'type': "normal",
                 'label': "",
                 'icon': "sign-blank",
-                'click': function() { }
+                'cmd': ""
             });
 
 
@@ -109,7 +110,8 @@ define([], function() {
                     }
                     e.preventDefault();
                     that.trigger("action");
-                    item.click();
+                    // item.click();
+                    commands.run(item.cmd);
                 }
             });
 

@@ -5,18 +5,17 @@ define([
 
         var menuGroups = [
             {
-                label: "File",
+                label: "Help",
                 items: [
                     {
-                        label: "New File",
+                        label: "About",
                         icon: "file-code-o",
-                        click: function() {
-                        }
+                        cmd: "application.about"
                     },
                     {
-                        label: "New Folder",
-                        click: function() {
-                        }
+                        label: "Release Changes",
+                        icon: "file-code-o",
+                        cmd: "application.changes"
                     },
                     {
                         type: "divider"
@@ -27,13 +26,9 @@ define([
                         items: [
                             {
                                 label: "Files",
-                                click: function() {
-                                }
                             },
                             {
                                 label: "Folder",
-                                click: function() {
-                                }
                             }
                         ]
                     },
@@ -42,9 +37,6 @@ define([
                     },
                     {
                         label: "Refresh Tree",
-                        click: function() {
-
-                        }
                     }
                 ]
             },
@@ -53,13 +45,9 @@ define([
                 items: [
                     {
                         label: "Files",
-                        click: function() {
-                        }
                     },
                     {
                         label: "Folder",
-                        click: function() {
-                        }
                     }
                 ]
             },
